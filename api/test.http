@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:6969
+### Run instances
+POST {{baseUrl}}/run_instances
+Content-Type: application/json
+
+{
+    "name": "meow",
+    "ssh_port": 2044
+}
+
+### Describe Instances
+GET {{baseUrl}}/describe_instances
+
+### Terminate Instances
+POST {{baseUrl}}/terminate_instances
+Content-Type: application/json
+
+{
+    "instance_id": "b7eac253be76"
+}
+
+### List Volumes
+GET {{baseUrl}}/list_volumes
+Content-Type: application/json
+
+### delete volumes
+DELETE {{baseUrl}}/remove_volume
+Content-Type: application/json
+
+{
+    "name": "meow_data"
+}
